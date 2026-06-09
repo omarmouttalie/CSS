@@ -1,0 +1,51 @@
+/* --- Style Global --- */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    min-height: 80vh;
+    background-color: #f8fafc;
+}
+
+/* --- 1. TRANSITION (Bouton) --- */
+button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Déclare la propriété à observer, la durée et la courbe de vitesse */
+    transition: background-color 0.4s ease;
+}
+
+/* Nouvel état déclenché par l'utilisateur */
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* --- 2. ANIMATION (Boîte) --- */
+.box {
+    width: 80px;
+    height: 80px;
+    background-color: #e74c3c;
+    border-radius: 8px;
+    /* Nom de l'animation, durée, rythme (linéaire) et répétition infinie */
+    animation: rotation 3s linear infinite;
+}
+
+/* Définition des étapes de l'animation autonome */
+@keyframes rotation {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
+}
